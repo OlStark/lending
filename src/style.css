@@ -1,0 +1,265 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Barlow;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+header {
+    justify-content: space-between;
+    width: 550px;
+    display: flex;
+    margin-top: 64px;
+    position: fixed;
+    right: 170px;
+    background-color: white;
+}
+
+.sidebar {
+    position: fixed;
+    width: 18rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    border-right: solid 1px #E5E5E5;
+}
+
+.range, .button, .points{
+    margin: 0 auto;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.points_list {
+  position: relative;
+  left: 26px;
+}
+
+ul {
+    position: relative;
+    right: 24px;
+}
+
+li {
+    list-style: none;
+    height: 42px;
+    width: 4px;
+    background-color: #E5E5E5;
+    border-radius: 2px;
+}
+
+.active {
+    background-color: 
+    #B4977B;
+}
+
+.first_number, .second_number {
+  font-size: 3.3rem;
+  color: #B4977B;
+}
+
+.navigation {
+  width: 405px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.navigation p:hover {
+  color: #B4977B;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 1230px;
+  display: flex;
+  position: relative;
+  left: 450px;
+  margin-bottom: 150px;
+}
+
+.links {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 500px;
+  left: 50px;
+  top: 80px;
+  background-color: white;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+.description {
+  position: relative;
+  top: 246px;
+  left: 133px;
+  width: 650px;
+  
+  font-size: 18px;
+}
+
+.description h1 {
+  font-weight: 600;
+  font-size: 64px;
+  margin-bottom: 40px;
+  width: 517px;
+}
+
+.button_buy{
+  border: none;
+  background-color: #B4977B;
+  color: white;
+  width: 178px;
+  height: 60px;
+  border-radius: 50px;
+  margin-top: 40px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.first_img, .second_img, .third_img{
+  background-image: url(../image/icons/Group\ 5.svg);
+  background-size: cover;
+  background-position: center;
+  width: 145px;
+  height: 145px;
+  position: absolute;
+  right: -80px;
+  top: 235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.second_img {
+  width: 117px;
+  height: 117px;
+  right: 295px;
+  top: 636px;
+
+}
+
+.third_img {
+  top: 920px;
+  left: 1117px;
+}
+
+.numb_page {
+  text-shadow:
+    1px 0 1px #B4977B,
+    0 1px 1px #B4977B, 
+    -1px 0 1px #B4977B, 
+    0 -1px 1px #B4977B;
+  color: white;
+  position: absolute;
+  right: 0;
+  font-size: 200px;
+  font-weight: 600;
+  line-height: 240px;
+}
+
+.desc_pasta {
+  max-height: 190px;
+  overflow-y: scroll;
+}
+
+.desc_pasta::-webkit-scrollbar {
+  width: 4px; 
+  height: 40px;
+  background-color: #E5E5E5;
+}
+
+.desc_pasta::-webkit-scrollbar-thumb {
+  background-color: #B4977B;
+  }
+
+  .card3 {
+    bottom: -200px;
+  }
