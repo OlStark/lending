@@ -10,6 +10,11 @@ document.querySelector('.first_number').innerHTML = page;
 document.querySelector('.second_number').innerHTML = lastPage;
 
 
+function sum () {
+    let newNumber =  Number(page) + index - 1;
+    let newString = '0' + String(newNumber);
+    document.querySelector('.first_number').innerHTML = newString;
+}
 
 const nextElem = () => {
     if (index !== 0) {
@@ -18,12 +23,10 @@ const nextElem = () => {
     pointsList[index].classList.add('active');
     index += 1;
 
-    function sum () {
-        let newNumber =  Number(page) + index - 1;
-        let newString = '0' + String(newNumber);
-        document.querySelector('.first_number').innerHTML = newString;
-    }
-    
+    window.scrollBy({
+        top: 1080,
+        behavior: "smooth",
+    })
     sum();
 }
 

@@ -83,12 +83,12 @@ select {
 
 header {
     justify-content: space-between;
-    width: 550px;
+    width: 30%;
     display: flex;
     margin-top: 64px;
     position: fixed;
     right: 170px;
-    background-color: white;
+    z-index: 10;
 }
 
 .sidebar {
